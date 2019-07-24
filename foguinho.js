@@ -15,7 +15,11 @@ function initializeGrid() {
 }
 
 function gridComputation() {
+  var lastLine = width * height - width
 
+  for (var i = lastLine; i < width * height; i++) {
+    grid[i] = 36
+  }
 }
 
 function renderFire() {
@@ -35,5 +39,8 @@ function renderFire() {
 }
 
 initializeGrid()
+
+gridComputation()
+
 renderFire()
 console.log('Foguinho loaded')
